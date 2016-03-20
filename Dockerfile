@@ -5,5 +5,5 @@ RUN apt-get update \
 	&& rm -r /var/lib/apt/lists/*
 COPY mosquitto.conf /etc/mosquitto/mosquitto.conf
 
-CMD mosquitto
+CMD mosquitto -c /etc/mosquitto/mosquitto.conf
 EXPOSE 1883
